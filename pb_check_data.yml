@@ -1,0 +1,13 @@
+---
+- name: "VALIDATE DATA"
+  hosts: "localhost"
+  gather_facts: false
+
+  vars_files:
+    - vars/device_output.json
+    - vars/input_data.yml
+
+  tasks:
+    - name: "INCLUDE DATA VALIDATION ROLE"
+      ansible.builtin.include_role:
+        name: "Role_data_validation"

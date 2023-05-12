@@ -1,0 +1,4 @@
+---
+ntp_status:
+  status: "synchronised"
+  server: "10.20.20.1"

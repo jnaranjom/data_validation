@@ -1,0 +1,7 @@
+{
+    "show_ntp_status": {
+        "status": "synchronised",
+        "stratum": 4,
+        "server": "10.20.20.1"
+    }
+}

@@ -1,0 +1,4 @@
+---
+- name: "RUN THE QUERY FOR THE INPUT DATA"
+  ansible.builtin.set_fact:
+    query_result: '{{ data | community.general.json_query(query) }}'

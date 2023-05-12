@@ -1,0 +1,12 @@
+---
+- name: "INCLUDE - TASK TO RUN QUERY"
+  ansible.builtin.include_tasks: "task.query_{{ match }}.yml"
+  vars:
+    name: "{{ item['name'] }}"
+    query: "{{ item['query'] }}"
+    data: "{{ item['output_variable'] }}"
+    expected_result: "{{ item['expected_result'] }}"
+    match: "{{ item['match'] }}"
+  loop: "{{ input_data }}"
+  loop_control:
+    label: "{{ item['name'] }}"

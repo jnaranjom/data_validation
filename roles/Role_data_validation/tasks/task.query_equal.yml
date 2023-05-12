@@ -1,0 +1,9 @@
+---
+- name: "INCLUDE - TASK RUN QUERY"
+  ansible.builtin.include_tasks: "task.query_run.yml"
+
+- name: "ASSERT QUERY RESULT"
+  ansible.builtin.assert:
+    that: expected_result | symmetric_difference(query_result) | length == 0
+    quiet: true
+  register: "assert_result_equal"

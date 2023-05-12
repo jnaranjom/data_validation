@@ -1,0 +1,15 @@
+---
+input_data:
+  - name: "ntp_status"
+    query: "[status]"
+    output_variable: "{{ show_ntp_status }}"
+    expected_result:
+      - "{{ ntp_status['status'] }}"
+    match: "equal"
+
+  - name: "ntp_server"
+    query: "[server]"
+    output_variable: "{{ show_ntp_status }}"
+    expected_result:
+      - "{{ ntp_status['server'] }}"
+    match: "equal"
